@@ -1,0 +1,12 @@
+.box1{
+    background-color: rgb(60, 60, 219);
+    border-radius: 15px;
+    text-align: left;
+    
+    padding:1% 14%;
+}
+main{
+    padding:15px;
+}
+.button{
+}
