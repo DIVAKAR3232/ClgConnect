@@ -1,5 +1,17 @@
 import { useState } from 'react';
 import { FaPaperPlane, FaCalendarAlt, FaUsers, FaShieldAlt, FaSearch, FaCommentDots, FaQuestionCircle } from 'react-icons/fa';
+import {
+  Calendar,
+  Users,
+  BookOpen,
+  FileText,
+  Gift,
+  Award,
+  Map,
+  Search,
+  TrendingUp,
+  Shield,
+} from "lucide-react";
 import '../Styles/HContainer.css';
 function HContainer() {
     const [name, setName] = useState('');
@@ -22,7 +34,18 @@ function HContainer() {
             default: return { bg: "bg-gray-100", text: "text-gray-800", icon: "text-gray-500" };
         }
     };
-
+const features = [
+  { icon: <Calendar size={28} />, title: "Events", bg: "bg-blue-100", text: "text-blue-800" },
+  { icon: <Users size={28} />, title: "Club Info & Activities", bg: "bg-pink-100", text: "text-pink-800" },
+  { icon: <BookOpen size={28} />, title: "Teacher Profiles", bg: "bg-purple-100", text: "text-purple-800" },
+  { icon: <FileText size={28} />, title: "Study Materials", bg: "bg-green-100", text: "text-green-800" },
+  { icon: <Gift size={28} />, title: "Student Skills", bg: "bg-yellow-100", text: "text-yellow-800" },
+  { icon: <Award size={28} />, title: "My Achievements", bg: "bg-cyan-100", text: "text-cyan-800" },
+  { icon: <Map size={28} />, title: "Campus Map", bg: "bg-emerald-100", text: "text-emerald-800" },
+  { icon: <Search size={28} />, title: "Lost & Found", bg: "bg-orange-100", text: "text-orange-800" },
+  { icon: <TrendingUp size={28} />, title: "Placement Experience", bg: "bg-rose-100", text: "text-rose-800" },
+  { icon: <Shield size={28} />, title: "Anti-Ragging Complaints", bg: "bg-red-100", text: "text-red-800" },
+];
     return (
         <main>
 \        <section className="relative bg-gradient-to-br from-indigo-600 to-blue-600 text-white rounded-2xl p-6 md:p-10 mb-8 custom-shadow overflow-hidden">
@@ -98,7 +121,66 @@ function HContainer() {
                     </div>
                 </section>
             </div>
-        </main>
+ <div className="px-6 py-10 mt-10 bg-gray-50 min-h-screen">
+  <h2 className="text-3xl font-bold mb-10 text-gray-800">
+    <pre>                                                             Explore CollegeConnect</pre></h2>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+    
+    <div className="bg-blue-100 text-blue-900 p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 flex flex-col items-center justify-center min-h-[200px]">
+      <Calendar size={32} />
+      <p className="mt-3 text-lg font-semibold text-center">Events</p>
+    </div>
+
+    <div className="bg-pink-100 text-pink-900 p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 flex flex-col items-center justify-center min-h-[200px]">
+      <Users size={32} />
+      <p className="mt-3 text-lg font-semibold text-center">Club Info & Activities</p>
+    </div>
+
+    <div className="bg-purple-100 text-purple-900 p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 flex flex-col items-center justify-center min-h-[200px]">
+      <BookOpen size={32} />
+      <p className="mt-3 text-lg font-semibold text-center">Teacher Profiles</p>
+    </div>
+
+    <div className="bg-green-100 text-green-900 p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 flex flex-col items-center justify-center min-h-[200px]">
+      <FileText size={32} />
+      <p className="mt-3 text-lg font-semibold text-center">Study Materials</p>
+    </div>
+
+    <div className="bg-yellow-100 text-yellow-900 p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 flex flex-col items-center justify-center min-h-[200px]">
+      <Gift size={32} />
+      <p className="mt-3 text-lg font-semibold text-center">Student Skills</p>
+    </div>
+
+    <div className="bg-cyan-100 text-cyan-900 p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 flex flex-col items-center justify-center min-h-[200px]">
+      <Award size={32} />
+      <p className="mt-3 text-lg font-semibold text-center">My Achievements</p>
+    </div>
+
+    <div className="bg-emerald-100 text-emerald-900 p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 flex flex-col items-center justify-center min-h-[200px]">
+      <Map size={32} />
+      <p className="mt-3 text-lg font-semibold text-center">Campus Map</p>
+    </div>
+
+    <div className="bg-orange-100 text-orange-900 p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 flex flex-col items-center justify-center min-h-[200px]">
+      <Search size={32} />
+      <p className="mt-3 text-lg font-semibold text-center">Lost & Found</p>
+    </div>
+
+    <div className="bg-rose-100 text-rose-900 p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 flex flex-col items-center justify-center min-h-[200px]">
+      <TrendingUp size={32} />
+      <p className="mt-3 text-lg font-semibold text-center">Placement Experience</p>
+    </div>
+
+    <div className="bg-red-100 text-red-900 p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 flex flex-col items-center justify-center min-h-[200px]">
+      <Shield size={32} />
+      <p className="mt-3 text-lg font-semibold text-center">Anti-Ragging Complaints</p>
+    </div>
+
+  </div>
+</div>
+
+                   </main>
     );
 }
 

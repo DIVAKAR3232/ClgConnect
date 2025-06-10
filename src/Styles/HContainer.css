@@ -1,5 +1,5 @@
 .announcements-display-area {
-    height: 12rem; /* Fixed height for the visible area */
+    height: 12rem;
     position: relative;
     overflow: hidden;
     -webkit-mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
@@ -10,9 +10,6 @@
     position: absolute;
     width: 100%;
     top: 0;
-    /* We need to make sure the scroller itself is taller than the display area.
-       By setting height to auto, it will expand to contain all content.
-       The animation then correctly scrolls through this expanded height. */
     height: auto;
     animation: scroll-news 15s linear infinite;
 }
@@ -20,16 +17,12 @@
 .announcements-display-area:hover .announcements-scroller {
     animation-play-state: paused;
 }
-
-/* Keyframes remain the same, as they correctly define the loop points */
 @keyframes scroll-news {
     0% {
         transform: translateY(0%);
     }
     100% {
-        /* This needs to be the height of ONE set of announcements */
-        /* Since you duplicated them, -50% of the total scroller height works,
-           as the total scroller height is effectively twice the height of one set. */
+     
         transform: translateY(-50%);
     }
 }

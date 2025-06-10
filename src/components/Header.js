@@ -14,7 +14,7 @@ function Header() {
           </button>
           <div className="flex items-center space-x-2 bg-indigo-100 rounded-full pr-3 pl-2 py-1 cursor-pointer">
             <img
-              src="https://placehold.co/36x36/6366f1/ffffff?text=A" // Student avatar
+              src="https://placehold.co/36x36/6366f1/ffffff?text=A" 
               alt="User Avatar"
               className="w-9 h-9 rounded-full border-2 border-indigo-400"
               onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/36x36/6366f1/ffffff?text=A"; }}
