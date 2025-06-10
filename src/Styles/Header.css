@@ -3,6 +3,14 @@
     background-color: #ffffff;
     height: 105px;
 }
-.header-title{
-    
+.scrolling-announcements {
+  animation: scroll-up 15s linear infinite;
+  padding-bottom: 100%;
 }
+
+.scrolling-announcements p {
+  margin-bottom: 1rem;
+  animation: fade-in-out 15s linear infinite;
+}
+
+
