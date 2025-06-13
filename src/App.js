@@ -1,15 +1,19 @@
 import React from 'react';
-import Header from './components/Header';
-import HContainer  from './components/HContainer';
-import Footer from './components/Footer';
+import {BrowserRouter as Router,Routes,Route,Link} from 'react-router-dom';
+import Home from './Pages/Home';
+import Login from './components/Login';
+import Signin from './components/Signup';
+
 function App() {
   return (
-    
-    <div style={{ backgroundColor: '#edecf1',height: '200vh'}}>
-       <Header /> 
-       <HContainer/>
-       <Footer />
-    </div>
+    <Router>
+      <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/Login" element={<Login/>}/> 
+          <Route path="/signup" element={<Signin/>}/>
+      </Routes>
+    </Router>
+      
   );
 }
 
